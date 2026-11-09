@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Smartwatch illustration">
+<rect width="800" height="800" fill="#EEF1F6"/>
+<ellipse cx="400" cy="672" rx="210" ry="20" fill="#171717" opacity=".08"/>
+<rect x="320" y="110" width="160" height="230" rx="30" fill="#2B2B2B"/>
+<rect x="320" y="460" width="160" height="230" rx="30" fill="#2B2B2B"/>
+<rect x="250" y="270" width="300" height="260" rx="72" fill="#171717"/>
+<rect x="268" y="288" width="264" height="224" rx="58" fill="#0B1020"/>
+<circle cx="400" cy="400" r="80" fill="none" stroke="#2563EB" stroke-width="12"/>
+<path d="M400 400V344M400 400l36 22" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/>
+<rect x="548" y="352" width="14" height="52" rx="7" fill="#404040"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Camera illustration">
+<rect width="800" height="800" fill="#EEF1F6"/>
+<ellipse cx="400" cy="672" rx="210" ry="20" fill="#171717" opacity=".08"/>
+<rect x="170" y="290" width="460" height="310" rx="40" fill="#171717"/>
+<path d="M300 290l30-50h140l30 50z" fill="#2B2B2B"/>
+<circle cx="400" cy="445" r="112" fill="#404040"/>
+<circle cx="400" cy="445" r="82" fill="#0B1020"/>
+<circle cx="400" cy="445" r="46" fill="#2563EB" opacity=".9"/>
+<circle cx="372" cy="418" r="12" fill="#fff" opacity=".7"/>
+<circle cx="568" cy="338" r="14" fill="#F8F9FA"/>
+</svg>

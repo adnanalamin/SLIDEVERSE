@@ -45,11 +45,15 @@ $('#q').oninput=e=>{state.q=e.target.value.trim().toLowerCase();state.page=1;ren
 $('#reset').onclick=()=>{state={q:'',cat:'All',tech:'All',page:1};$('#q').value='';syncChips();render()};
 
 /* cards */
+/* component links: a slider with a demo folder gets a Live Demo link (relative, GitHub Pages safe) and its own GitHub folder */
+const folderOf=s=>s.demo?String(s.demo).replace(/^\.?\/+|\/+$/g,''):'';
+const ghUrl=s=>folderOf(s)?`${REPO}/tree/main/${encodeURI(folderOf(s))}`:`${REPO}/tree/main/components`;
+const demoLink=s=>folderOf(s)?`<a class="btn sm" href="${encodeURI(folderOf(s))}/" target="_blank" rel="noopener" aria-label="Live demo: ${esc(s.title)}">Live Demo ↗</a>`:'';
 function card(s){const f=favs.includes(s.id);return `<article class="card" data-id="${s.id}">
 <div class="thumb ${s.kind}" style="background:${s.slides[0][2]}"><button class="fav" aria-pressed="${f}" aria-label="${f?'Remove from':'Add to'} favorites: ${esc(s.title)}">${f?'♥':'♡'}</button><b>${esc(s.slides[0][0])}</b><span>${esc(s.slides[0][1])}</span></div>
 <div class="cb"><span class="num">SLIDE / ${s.id}</span><h3>${esc(s.title)}</h3><p class="meta">${esc(s.category)} · ${esc(s.technologies.join(', '))}</p><p>${esc(s.description)}</p>
 <div class="tags">${s.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div>
-<div class="acts"><button class="btn sm" data-act="pv">Preview ↗</button><button class="btn sm ghost" data-act="cd">View Code ↗</button><a class="btn sm ghost" href="${REPO}/tree/main/components" target="_blank" rel="noopener">GitHub ↗</a></div></div></article>`}
+<div class="acts"><button class="btn sm" data-act="pv">Preview ↗</button><button class="btn sm ghost" data-act="cd">View Code ↗</button>${demoLink(s)}<a class="btn sm ghost" href="${ghUrl(s)}" target="_blank" rel="noopener">GitHub ↗</a></div></div></article>`}
 function getFiltered(){
  return S.filter(s=>{const hay=[s.title,s.category,s.technologies.join(' '),s.tags.join(' '),s.description].join(' ').toLowerCase();
   return(!state.q||hay.includes(state.q))&&(state.cat==='All'||(state.cat==='Favorites'?favs.includes(s.id):s.category===state.cat||s.tags.includes(state.cat)))&&(state.tech==='All'||s.technologies.includes(state.tech))});

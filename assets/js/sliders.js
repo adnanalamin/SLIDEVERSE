@@ -1,5 +1,7 @@
 /* SLIDEVERSE catalogue. To add a slider: append one object — the site renders it automatically.
-   kind -> transition style (.k-* in style.css). slides -> [title, subtitle, css background]. */
+   kind -> transition style (.k-* in style.css). slides -> [title, subtitle, css background].
+   demo (optional) -> relative folder of a standalone component, e.g. "my-slider/". It adds a Live Demo link and
+   points the GitHub link at that folder (https://github.com/adnanalamin/SLIDEVERSE/tree/main/my-slider). */
 window.SLIDERS = [
  {id:"001",title:"Minimal Clean Slider",category:"Minimal",kind:"minimal",technologies:["HTML / CSS / JavaScript"],tags:["Responsive","Animated","Touch"],description:"Quiet, typographic slides with a soft sideways glide.",
   slides:[["Less, but better","Whitespace does the talking","linear-gradient(135deg,#eef0f6,#cfd5e6)"],["Calm motion","One gentle easing curve","linear-gradient(135deg,#e8f4f2,#bfe3de)"],["Built to last","Plain HTML, CSS and JS","linear-gradient(135deg,#f1ecfb,#d8cbf6)"]]},
@@ -11,8 +13,8 @@ window.SLIDERS = [
   slides:[["Depth","rotateY with perspective","linear-gradient(135deg,#2b1f6b,#8b6cff)"],["Angle","Real 3D transforms","linear-gradient(135deg,#0f4c5c,#65e3d9)"],["Space","GPU-friendly motion","linear-gradient(135deg,#5c1f4a,#ff6a88)"]]},
  {id:"005",title:"Image Gallery Slider",category:"Image Gallery",kind:"gallery",technologies:["HTML / CSS / JavaScript","Bootstrap"],tags:["Responsive","Touch","Gallery"],description:"Crossfading gallery frames with a gentle zoom.",
   slides:[["Dusk","Gradient scenes, no image weight","linear-gradient(180deg,#ff9966,#5b3b8c 70%,#1a1035)"],["Lagoon","Crossfade with slow zoom","linear-gradient(180deg,#7fe7d9,#2a6fa8 70%,#0b2540)"],["Meadow","Swap in your own photos","linear-gradient(180deg,#d9f27f,#3b8c5b 70%,#0e2b1b)"]]},
- {id:"006",title:"Product Showcase Slider",category:"Product",kind:"product",technologies:["HTML / CSS / JavaScript","React"],tags:["Responsive","Card","Touch"],description:"Product cards with a lifted focus item.",
-  slides:[["Aero Lamp","Warm light, cool design","linear-gradient(135deg,#232846,#3a3f6e)"],["Pulse Watch","Track what matters","linear-gradient(135deg,#1d3b3a,#2f6f6a)"],["Nimbus Chair","Sit differently","linear-gradient(135deg,#3b2540,#6a3f73)"]]},
+ {id:"006",title:"Product Showcase Slider",category:"Product",kind:"product",technologies:["HTML / CSS / JavaScript"],tags:["Responsive","Card","Touch","Keyboard","Infinite Loop"],description:"E-commerce product carousel with infinite looping, drag and swipe, keyboard control, wishlist, cart and quick view.",demo:"product-showcase-slider/",
+  slides:[["Aurora Pro Headphones","Adaptive noise cancelling, 40-hour battery","linear-gradient(135deg,#eaf1ff,#c9dbff)"],["Pulse Series 7 Smart Watch","Always-on display with built-in GPS","linear-gradient(135deg,#e6f6f1,#bfe6d8)"],["Stride Runner Sneakers","Performance running, everyday comfort","linear-gradient(135deg,#fdf0e6,#f6d3b5)"]]},
  {id:"007",title:"Typography Slider",category:"Typography",kind:"type",technologies:["HTML / CSS / JavaScript"],tags:["Animated","Responsive"],description:"Oversized words that rise into place.",
   slides:[["Bold.","Words as the visual","linear-gradient(135deg,#111522,#1b2036)"],["Loud.","Scale creates hierarchy","linear-gradient(135deg,#171b29,#241c46)"],["Clear.","Contrast first","linear-gradient(135deg,#0d1020,#10303a)"]]},
  {id:"008",title:"Parallax Hero Slider",category:"Hero",kind:"parallax",technologies:["HTML / CSS / JavaScript","Tailwind CSS"],tags:["Parallax","Responsive","Touch"],description:"Full-bleed hero with layered depth on pointer move.",

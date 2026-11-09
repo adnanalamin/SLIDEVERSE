@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Sunglasses illustration">
+<rect width="800" height="800" fill="#EEF1F6"/>
+<ellipse cx="400" cy="672" rx="210" ry="20" fill="#171717" opacity=".08"/>
+<path d="M120 400L190 420M680 400L610 420" stroke="#171717" stroke-width="16" stroke-linecap="round" fill="none"/>
+<ellipse cx="290" cy="440" rx="110" ry="88" fill="#171717"/>
+<ellipse cx="510" cy="440" rx="110" ry="88" fill="#171717"/>
+<path d="M385 415q15-26 30 0" stroke="#171717" stroke-width="14" stroke-linecap="round" fill="none"/>
+<ellipse cx="255" cy="415" rx="34" ry="18" fill="#2563EB" opacity=".55" transform="rotate(-20 255 415)"/>
+<ellipse cx="475" cy="415" rx="34" ry="18" fill="#2563EB" opacity=".55" transform="rotate(-20 475 415)"/>
+</svg>
