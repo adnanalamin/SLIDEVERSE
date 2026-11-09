@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Sneaker illustration">
+<rect width="800" height="800" fill="#EEF1F6"/>
+<ellipse cx="400" cy="672" rx="210" ry="20" fill="#171717" opacity=".08"/>
+<path d="M160 540C160 430 190 340 250 310L300 362C345 395 405 385 445 352C525 405 650 425 660 505V545H160Z" fill="#2563EB"/>
+<rect x="150" y="540" width="520" height="52" rx="26" fill="#F8F9FA"/>
+<path d="M300 362l38 38M346 374l36 36M392 366l34 30" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none"/>
+<path d="M160 520H660" stroke="#1D4ED8" stroke-width="8" fill="none"/>
+</svg>
