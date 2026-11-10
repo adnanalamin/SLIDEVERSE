@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SLIDEVERSE — The Ultimate Open-Source Slider Collection</title>
-<meta name="description" content="Explore modern, responsive and animated slider components for HTML, CSS, JavaScript, React, Tailwind CSS and Bootstrap.">
+<meta name="description" content="Explore modern, responsive and animated slider components built with HTML, CSS and JavaScript.">
 <link rel="canonical" href="https://adnanalamin.github.io/SLIDEVERSE/">
 <meta property="og:type" content="website"><meta property="og:title" content="SLIDEVERSE — The Ultimate Open-Source Slider Collection">
 <meta property="og:description" content="Explore modern, responsive and animated slider components."><meta property="og:url" content="https://adnanalamin.github.io/SLIDEVERSE/">
@@ -19,7 +19,7 @@
   <div class="wrap hdr-in">
     <a class="logo" href="#top" aria-label="SLIDEVERSE home"><b>SLIDEVERSE</b><small>THE OPEN SLIDER LIBRARY</small></a>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="#explore">Explore</a><a href="#categories">Categories</a><a href="#features">Features</a><a href="#frameworks">Frameworks</a><a href="#contribute">Contribute</a>
+      <a href="#explore">Explore</a><a href="#features">Features</a><a href="#contribute">Contribute</a>
       <a href="https://github.com/adnanalamin/SLIDEVERSE" target="_blank" rel="noopener">GitHub</a>
     </nav>
     <div class="ctl">
@@ -38,12 +38,12 @@
     <h1><span>Every slide.</span><span>A new dimension.</span></h1>
     <p class="lead">A growing collection of beautifully crafted, responsive and interactive sliders. Discover inspiration, preview components and build something remarkable.</p>
     <div class="row"><a class="btn" href="#explore">Explore the Library <i>→</i></a><a class="btn ghost" href="https://github.com/adnanalamin/SLIDEVERSE" target="_blank" rel="noopener">View on GitHub <i>↗</i></a></div>
-    <dl class="stats"><div><dt data-count="200" data-suf="+">200+</dt><dd>Planned Components</dd></div><div><dt>06</dt><dd>Technologies</dd></div><div><dt>∞</dt><dd>Possibilities</dd></div></dl>
+    <dl class="stats"><div><dt>1</dt><dd>Component</dd></div><div><dt>0</dt><dd>Frameworks</dd></div><div><dt>0</dt><dd>Build steps</dd></div></dl>
   </div>
-  <div class="hero-v" id="heroV" aria-label="Interactive slider demo">
-    <div class="glow"></div><div class="stack" id="stack"></div>
-    <div class="hv-ctl"><button class="ib" id="hvPrev" aria-label="Previous">←</button><button class="ib" id="hvNext" aria-label="Next">→</button></div>
-  </div>
+  <a class="hero-v" id="heroV" href="product-showcase-slider/" target="_blank" rel="noopener" aria-label="Open the Product Showcase Slider live demo">
+    <div class="glow"></div>
+    <img src="product-showcase-slider/assets/images/screenshot-desktop.png" alt="Screenshot of the Product Showcase Slider" width="1280" height="800">
+  </a>
 </section>
 
 <div class="ticker" aria-hidden="true"><div class="tk"></div></div>
@@ -53,17 +53,14 @@
   <div class="search"><input id="q" type="search" placeholder="Search sliders..." aria-label="Search sliders" autocomplete="off"><kbd>Ctrl K</kbd></div>
   <div class="chips" id="catChips" role="group" aria-label="Filter by category"></div>
   <div class="chips tech" id="techChips" role="group" aria-label="Filter by technology"></div>
-  <p class="count" id="count" aria-live="polite"></p>
+  <div class="count-row"><p class="count" id="count" aria-live="polite"></p><button class="btn ghost sm" id="clearBtn" type="button">Clear filters</button></div>
   <div class="grid" id="grid"></div>
   <nav class="pagination" id="pagination" aria-label="Slider library pages"></nav>
   <div class="empty" id="empty" hidden><h3 id="emptyT">No sliders found</h3><p id="emptyP">Try another keyword or category.</p><button class="btn ghost sm" id="reset">Reset filters</button></div>
   <div class="recent"><h3>Recently Viewed</h3><div class="grid" id="recent"></div><p class="muted" id="recentEmpty">Your recently viewed sliders will appear here.</p></div>
 </section>
 
-<section class="sec wrap" id="categories"><div class="sec-h"><h2>Browse by style.</h2><p>Ten visual directions, each growing with the library.</p></div><div class="cats" id="cats"></div></section>
 <section class="sec wrap" id="features"><div class="sec-h"><h2>More than just a slider.</h2></div><div class="feats" id="feats"></div></section>
-<section class="sec wrap" id="frameworks"><div class="sec-h"><h2>Made for the tools you already use.</h2></div><div class="fw" id="fw"></div></section>
-
 <section class="sec wrap" id="contribute">
   <div class="panel">
     <h2>Built in the open.</h2>
@@ -80,22 +77,32 @@
 
 <footer class="ftr"><div class="wrap ft">
   <div><b class="logo-t">SLIDEVERSE</b><p class="kick">Create. Animate. Slide.</p><p class="muted">An open-source collection of modern slider components for developers and designers.</p></div>
-  <nav aria-label="Footer"><a href="#explore">Explore</a><a href="#categories">Categories</a><a href="#features">Features</a><a href="https://github.com/adnanalamin/SLIDEVERSE" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/adnanalamin/SLIDEVERSE/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a><a href="https://github.com/adnanalamin/SLIDEVERSE/issues" target="_blank" rel="noopener">Issues</a><a href="https://github.com/adnanalamin/SLIDEVERSE/blob/main/LICENSE" target="_blank" rel="noopener">License</a></nav>
+  <nav aria-label="Footer"><a href="#explore">Explore</a><a href="#features">Features</a><a href="https://github.com/adnanalamin/SLIDEVERSE" target="_blank" rel="noopener">GitHub</a><a href="https://github.com/adnanalamin/SLIDEVERSE/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a><a href="https://github.com/adnanalamin/SLIDEVERSE/issues" target="_blank" rel="noopener">Issues</a><a href="https://github.com/adnanalamin/SLIDEVERSE/blob/main/LICENSE" target="_blank" rel="noopener">License</a></nav>
 </div><p class="wrap copy">© 2026 SLIDEVERSE · MIT License</p></footer>
 
-<!-- Preview modal -->
+<!-- Preview modal: the real slider, loaded from its own folder -->
 <div class="modal" id="pv" role="dialog" aria-modal="true" aria-labelledby="pvT" hidden>
   <div class="m-box" id="pvBox">
-    <div class="m-h"><h3 id="pvT"></h3><div class="ctl"><button class="btn sm ghost" id="pvAuto" aria-pressed="true">Pause</button><button class="btn sm ghost" id="pvFs">Fullscreen</button><button class="ib" data-close aria-label="Close preview">✕</button></div></div>
-    <div class="vp" id="vp" tabindex="0" aria-roledescription="carousel"></div>
-    <div class="m-f"><button class="ib" id="pvPrev" aria-label="Previous slide">←</button><div class="dots" id="dots"></div><button class="ib" id="pvNext" aria-label="Next slide">→</button></div>
+    <div class="m-h"><h3 id="pvT"></h3><div class="ctl"><button class="btn sm ghost" id="pvFs" type="button">Fullscreen</button><button class="ib" data-close type="button" aria-label="Close preview">✕</button></div></div>
+    <iframe class="pv-frame" id="pvFrame" title="Slider preview" loading="lazy"></iframe>
   </div>
 </div>
-<!-- Code modal -->
+<!-- Code modal: real source files, one tab each -->
 <div class="modal" id="cd" role="dialog" aria-modal="true" aria-labelledby="cdT" hidden>
-  <div class="m-box code"><div class="m-h"><h3 id="cdT"></h3><button class="ib" data-close aria-label="Close code">✕</button></div>
-    <div class="tabs" id="tabs" role="tablist"></div><pre id="codeOut" tabindex="0"><code></code></pre>
-    <div class="m-f"><button class="btn sm" id="copy">Copy Code</button></div></div>
+  <div class="m-box code"><div class="m-h"><h3 id="cdT"></h3><button class="ib" data-close type="button" aria-label="Close code">✕</button></div>
+    <div class="tabs" id="tabs" role="tablist"></div><p class="file-path muted" id="cdPath"></p><pre id="codeOut" tabindex="0"><code></code></pre>
+    <div class="m-f"><button class="btn sm" id="copy" type="button">Copy Code</button></div></div>
+</div>
+<!-- Image manager -->
+<div class="modal" id="im" role="dialog" aria-modal="true" aria-labelledby="imT" hidden>
+  <div class="m-box im-box">
+    <div class="m-h"><h3 id="imT"></h3><button class="ib" data-close type="button" aria-label="Close image manager">✕</button></div>
+    <p class="im-note muted">Images are kept in <b>this browser only</b> and appear in the Preview and Live Demo on this device. They are not uploaded to GitHub — see the README to add images to the repository permanently. JPG, PNG, WebP or GIF, up to 10 MB each. Image 1 replaces the first product photo, image 2 the second, and so on; unused slots keep the original photo.</p>
+    <div class="im-bar"><button class="btn sm" id="imUpload" type="button">Upload images</button><button class="btn sm ghost" id="imReset" type="button">Remove all</button><span class="muted" id="imCount" aria-live="polite"></span></div>
+    <input type="file" id="imFileMulti" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" multiple hidden>
+    <input type="file" id="imFileOne" accept="image/jpeg,image/png,image/webp,image/gif,.jpg,.jpeg,.png,.webp,.gif" hidden>
+    <ul class="im-list" id="imList"></ul>
+  </div>
 </div>
 <div class="toast" id="toast" role="status"></div>
 <script src="assets/js/sliders.js"></script>

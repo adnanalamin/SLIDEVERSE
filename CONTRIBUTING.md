@@ -22,9 +22,9 @@ Each new slider should include:
 
 ## Suggested folder naming
 
-`sliders/NNN-short-descriptive-name/`
+`short-descriptive-name/` at the repository root, plus one entry in `assets/js/sliders.js`.
 
-Example: `sliders/001-minimal-clean/`
+Example: `product-showcase-slider/`
 
 ## Pull request process
 

@@ -102,7 +102,8 @@
   const integer = new Intl.NumberFormat(CONFIG.locale);
 
   const discountOf = (p) => (p.originalPrice > p.price ? Math.round((1 - p.price / p.originalPrice) * 100) : 0);
-  const imageUrl = (p, width) => `https://images.unsplash.com/${p.photo}?auto=format&fit=crop&w=${width}&q=80`;
+  /* `p.custom` is an object URL for an image picked in the SLIDEVERSE image manager (see loadCustomImages). */
+  const imageUrl = (p, width) => p.custom || `https://images.unsplash.com/${p.photo}?auto=format&fit=crop&w=${width}&q=80`;
   const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
   const ICONS = {
@@ -788,6 +789,34 @@
     });
   };
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  /* Optional: images chosen in the SLIDEVERSE catalogue's image manager live in this browser's IndexedDB
+     (database "slideverse", store "images", key = this folder's name). Image N replaces product N's photo.
+     Without any saved images, or if IndexedDB is unavailable, the original photos are used unchanged. */
+  const IMAGE_STORE_KEY = 'product-showcase-slider';
+  const loadCustomImages = () => new Promise((resolve) => {
+    const done = () => resolve();
+    const timeout = setTimeout(done, 1500);
+    try {
+      const open = indexedDB.open('slideverse', 1);
+      open.onupgradeneeded = () => { if (!open.result.objectStoreNames.contains('images')) open.result.createObjectStore('images'); };
+      open.onerror = () => { clearTimeout(timeout); done(); };
+      open.onsuccess = () => {
+        const db = open.result;
+        try {
+          const req = db.transaction('images', 'readonly').objectStore('images').get(IMAGE_STORE_KEY);
+          req.onsuccess = () => {
+            (req.result || []).slice(0, PRODUCTS.length).forEach((img, i) => {
+              if (img && img.blob) PRODUCTS[i].custom = URL.createObjectURL(img.blob);
+            });
+            db.close(); clearTimeout(timeout); done();
+          };
+          req.onerror = () => { db.close(); clearTimeout(timeout); done(); };
+        } catch (e) { clearTimeout(timeout); done(); }
+      };
+    } catch (e) { clearTimeout(timeout); done(); }
+  });
+
+  const start = () => loadCustomImages().then(init);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();
